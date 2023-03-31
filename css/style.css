@@ -57,7 +57,7 @@
 }
 
 .user-chat-col {
-    width: calc(65% - 1px);
+    width: calc(65%);
     height: 100%;
     border-left: 1px solid lightgrey;
 }
@@ -126,4 +126,25 @@
     padding: 15px 10px;
     align-items: center;
     justify-content: space-between;
+}
+
+/* USER-CHAT-COL STRUCTURE */
+.user-chat-col img {
+    width: 100%;
+}
+.background-chat {
+    background-image: url(../img/mine.jpg);
+    
+}
+
+.user-chat-col .user-interface {
+    align-items: center;
+}
+
+.user-chat-col .user-interface input {
+    width: 100%;
+}
+
+.user-chat-col .user-interface i {
+    margin: 0 10px;
 }
