@@ -1,0 +1,88 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+/* COLORS */
+.light-gray {
+    color: lightgray;
+}
+.gray {
+    color: #b1b1b1;
+}
+
+/* BACKGROUND SECTIONS */
+.background-green-bar {
+    height: 15vh;
+    width: 100%;
+    background-color: #009688;
+}
+.background-gray-bar {
+    height: 85vh;
+    width: 100%;
+    background-color: #dadbd2;
+}
+
+/* STRUCTURE */
+.container {
+    position: fixed;
+    height: 90vh;
+    width: 80%;
+    top: 5%;
+    left: 10%;
+    background-color: white;
+}
+
+.users-list-col {
+    width: 35%;
+    height: 100%;
+}
+
+.users-chat-col {
+    width: calc(65% - 1px);
+    height: 100%;
+    border-left: 1px solid lightgrey;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.user-icon img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.left-side {
+    align-items: center;
+}
+
+.right-side {
+    align-items: center;
+}
+
+.right-side i {
+    margin-left: 10px;
+}
+
+/* USER-LIST-COL STRUCTURE */
+.user-interface {
+    height: 8%;
+    width: 100%;
+    background-color: #eaeaea;
+    justify-content: space-between;
+    padding: 10px;
+}
