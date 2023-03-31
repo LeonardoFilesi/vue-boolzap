@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,89 +8,98 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
+
 <body>
-    <div class="background-green-bar"></div>
-    <div class="background-gray-bar"></div>
-    <div class="container flex">
-        <div class="contacts-list-col">
+    <div id="app">
 
-            <div class="user-interface flex">
+        <div class="background-green-bar"></div>
+        <div class="background-gray-bar"></div>
 
-                <div class="left-side flex">
-                    <div class="user-icon">
-                        <img src="img/avatar_io.jpg" alt="">
+        <div class="container flex">
+            <div class="contacts-list-col">
+
+                <div class="user-interface flex">
+
+                    <div class="left-side flex">
+                        <div class="user-icon">
+                            <img src="img/avatar_io.jpg" alt="">
+                        </div>
+                        <p>Sofia</p>
                     </div>
-                    <p>Sofia</p>
+
+                    <div class="right-side flex">
+                        <i class="fa-solid fa-circle-notch gray"></i>
+                        <i class="fa-solid fa-message gray"></i>
+                        <i class="fa-solid fa-ellipsis-vertical gray"></i>
+                    </div>
+
                 </div>
 
-                <div class="right-side flex">
-                    <i class="fa-solid fa-circle-notch gray"></i>
-                    <i class="fa-solid fa-message gray"></i>
-                    <i class="fa-solid fa-ellipsis-vertical gray"></i>
+                <div class="user-notification-annoying-pupup flex">
+
+                    <div class="left-side flex">
+                        <div class="user-icon flex bg-white"><i class="fa-solid fa-bell-slash sky-blue"></i></div>
+                        <div class="user-info">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="" class="gray">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="searchbar">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <input type="text" placeholder="&#xf002 Cerca o inizia una nuova chat">
+                </div>
 
-            <div class="user-notification-annoying-pupup flex">
-
-                <div class="left-side flex">
-                    <div class="user-icon flex bg-white"><i class="fa-solid fa-bell-slash sky-blue"></i></div>
-                    <div class="user-info">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="" class="gray">Attiva notifiche desktop</a>
+                <div class="contact-display flex">
+                    <div class="left-side flex">
+                        <div class="user-icon"></div>
+                        <div class="user-info"></div>
+                    </div>
+                    <div>
+                        <p class="light-gray">12:00</p>
                     </div>
                 </div>
-    
+
             </div>
 
-            <div class="searchbar">
-                <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                <input type="text" placeholder="&#xf002 Cerca o inizia una nuova chat">
-            </div>
-            
-            <div class="contact-display flex">
-                <div class="left-side flex">
-                    <div class="user-icon"></div>
-                    <div class="user-info"></div>
+            <div class="user-chat-col">
+                <div class="user-interface flex">
+
+                    <div class="left-side flex">
+                        <div class="user-icon">
+                            <img src="img/avatar_io.jpg" alt="">
+                        </div>
+                        <p>Sofia</p>
+                    </div>
+
+                    <div class="right-side flex">
+                        <i class="fa-solid fa-magnifying-glass gray"></i>
+                        <i class="fa-solid fa-paperclip gray"></i>
+                        <i class="fa-solid fa-ellipsis-vertical gray"></i>
+                    </div>
+
                 </div>
-                <div>
-                    <p class="light-gray">12:00</p>
+
+                <div class="background-chat"></div>
+                <!-- <img src="img/mine.jpg" alt=""> -->
+
+                <div class="user-interface flex">
+                    <i class="fa-regular fa-face-smile gray"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone gray"></i>
                 </div>
             </div>
 
         </div>
-
-        <div class="user-chat-col">
-            <div class="user-interface flex">
-
-                <div class="left-side flex">
-                    <div class="user-icon">
-                        <img src="img/avatar_io.jpg" alt="">
-                    </div>
-                    <p>Sofia</p>
-                </div>
-
-                <div class="right-side flex">
-                    <i class="fa-solid fa-magnifying-glass gray"></i> 
-                    <i class="fa-solid fa-paperclip gray"></i>
-                    <i class="fa-solid fa-ellipsis-vertical gray"></i>
-                </div>
-
-            </div>
-
-            <div class="background-chat"></div>
-            <!-- <img src="img/mine.jpg" alt=""> -->
-
-            <div class="user-interface flex">
-                <i class="fa-regular fa-face-smile gray"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
-                <i class="fa-solid fa-microphone gray"></i>
-            </div>
-        </div>
-        
+        <script src="js/data.js"></script>
     </div>
-    <script src="js/data.js"></script>
 </body>
+
 </html>
