@@ -22,8 +22,14 @@
 .gray {
     color: #b1b1b1;
 }
+.sky-blue {
+    color: #8edafc;
+}
+.bg-white {
+    background-color: white;
+}
 
-/* BACKGROUND SECTIONS */
+/* BACKGROUND SECTION */
 .background-green-bar {
     height: 15vh;
     width: 100%;
@@ -45,20 +51,24 @@
     background-color: white;
 }
 
-.users-list-col {
+.contacts-list-col {
     width: 35%;
     height: 100%;
 }
 
-.users-chat-col {
+.user-chat-col {
     width: calc(65% - 1px);
     height: 100%;
     border-left: 1px solid lightgrey;
 }
 
+/* TOOLS */
 .user-icon {
     width: 40px;
     height: 40px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 .user-icon img {
@@ -78,6 +88,11 @@
     margin-left: 10px;
 }
 
+.user-info {
+    font-size: .8rem;
+    margin-left: 5px;
+}
+
 /* USER-LIST-COL STRUCTURE */
 .user-interface {
     height: 8%;
@@ -85,4 +100,30 @@
     background-color: #eaeaea;
     justify-content: space-between;
     padding: 10px;
+}
+
+.user-notification-annoying-pupup {
+    height: 10%;
+    width: 100%;
+    background-color: #8edafc;
+    padding: 10px;
+    align-items: center;
+}
+
+.searchbar {
+    background-color: #fafafa;
+    width: 100%;
+    padding: 5px;
+}
+
+.searchbar input {
+    width: 100%;
+    padding: 3px;
+}
+
+.contact-display {
+    border-top: 1px solid lightgray;
+    padding: 15px 10px;
+    align-items: center;
+    justify-content: space-between;
 }
