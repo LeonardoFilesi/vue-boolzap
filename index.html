@@ -57,10 +57,16 @@
                     <input type="text" placeholder="&#xf002 Cerca o inizia una nuova chat">
                 </div>
 
-                <div class="contact-display flex">
+                <div 
+                class="contact-display flex"
+                v-for="(contact, index) in contacts">
                     <div class="left-side flex">
-                        <div class="user-icon"></div>
-                        <div class="user-info"></div>
+                        <div class="user-icon">
+                            <img :src="contacts[index].avatar" alt="">
+                        </div>
+                        <div class="user-info">
+                            <span>{{ contacts[index].name }}</span>
+                        </div>
                     </div>
                     <div>
                         <p class="light-gray">12:00</p>
