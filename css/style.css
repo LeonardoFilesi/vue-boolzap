@@ -143,8 +143,7 @@
 }
 .background-chat {
     background-image: url(../img/mine.jpg);
-    height: 84%;
-    
+    height: 100%;
 }
 
 .user-chat-col .user-interface {
@@ -157,4 +156,35 @@
 
 .user-chat-col .user-interface i {
     margin: 0 10px;
+}
+
+.chat-section {
+    position: relative;
+    height: 84%;
+}
+
+.chat {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.chat-in {
+    background-color: #F2FBFF;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 40%;
+    align-self: flex-start;
+}
+
+.chat-out {
+    background-color: #D5F9BA;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 40%;
+    align-self: flex-start;
 }

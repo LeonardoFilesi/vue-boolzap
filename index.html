@@ -60,10 +60,10 @@
                 <div class="contacts-list">
                     <div class="contact-display flex"
                     v-for="contact in contacts"
-                    >
+                    @click="setActiveIndex(index)">
                         <div class="left-side flex">
                             <div class="user-icon">
-                                <img :src="`img/avatar_1${contacts.avatar}.jpg`" alt="">
+                                <img :src="`img/${contacts.avatar}}.jpg`" alt="">
                             </div>
                             <div class="user-info">
                                 <span>{{ contact.name }}</span>
@@ -94,10 +94,18 @@
                     </div>
                 </div>
                  
-                <div class="background-chat"></div>
-                <!-- <img src="img/mine.jpg" alt=""> -->
-
                 
+
+                <div class="chat-section">
+                    <div class="background-chat"></div>
+                    <div class="chat flex">
+                        <div class="chat-in" 
+                        v-for="(message , index) in contacts[activeIndex].messages">
+                            <!-- <span class="message">{{ messages.message }}</span> -->
+                            <!-- <p class="date">{{ messages.date }}</p> -->
+                        </div>
+                    </div>
+                </div>
 
                 <div class="user-interface flex">
                     <i class="fa-regular fa-face-smile gray"></i>

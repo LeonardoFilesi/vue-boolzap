@@ -1,10 +1,12 @@
 const { createApp } = Vue;
 
-const  verifica = prompt("bella zì");
+// DEBUG
+/* const  verifica = prompt("bella zì"); */
 
 createApp ({
     data() {
         return {
+            toggle: {contactIndex : null, messageIndex: null},
             activeIndex: 0,
             contacts: [
                 {
@@ -172,7 +174,11 @@ createApp ({
         }
     },
     methods: {
-
+        // attribuisce ad active index = all'indice clickato
+           setActiveIndex: function(index) {
+            this.activeIndex = index;
+            // this.resetToggle();
+        },
     }
 
 }).mount("#app");
