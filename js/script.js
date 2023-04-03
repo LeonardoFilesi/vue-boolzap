@@ -1,9 +1,11 @@
 const { createApp } = Vue;
 
+const  verifica = prompt("bella zì");
+
 createApp ({
     data() {
         return {
-            index: 0,
+            activeIndex: 0,
             contacts: [
                 {
                     name: 'Michele',

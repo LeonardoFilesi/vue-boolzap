@@ -21,7 +21,7 @@
         <div class="background-gray-bar"></div>
 
         <div class="container flex">
-            <div class="contacts-list-col">
+            <div class="contacts-list-col flex">
 
                 <div class="user-interface flex">
 
@@ -57,44 +57,47 @@
                     <input type="text" placeholder="&#xf002 Cerca o inizia una nuova chat">
                 </div>
 
-                <div 
-                class="contact-display flex"
-                v-for="(contact, index) in contacts">
-                    <div class="left-side flex">
-                        <div class="user-icon">
-                            <img :src="contacts[index].avatar" alt="">
+                <div class="contacts-list">
+                    <div class="contact-display flex"
+                    v-for="contact in contacts"
+                    >
+                        <div class="left-side flex">
+                            <div class="user-icon">
+                                <img :src="`img/avatar_1${contacts.avatar}.jpg`" alt="">
+                            </div>
+                            <div class="user-info">
+                                <span>{{ contact.name }}</span>
+                                <p class="gray">Contact last message</p>
+                            </div>
                         </div>
-                        <div class="user-info">
-                            <span>{{ contacts[index].name }}</span>
+                        <div>
+                            <p class="light-gray">12:00</p>
                         </div>
-                    </div>
-                    <div>
-                        <p class="light-gray">12:00</p>
                     </div>
                 </div>
 
             </div>
 
             <div class="user-chat-col">
-                <div class="user-interface flex">
 
+                <div class="user-interface flex">
                     <div class="left-side flex">
                         <div class="user-icon">
                             <img src="img/avatar_io.jpg" alt="">
                         </div>
                         <p>Sofia</p>
                     </div>
-
                     <div class="right-side flex">
                         <i class="fa-solid fa-magnifying-glass gray"></i>
                         <i class="fa-solid fa-paperclip gray"></i>
                         <i class="fa-solid fa-ellipsis-vertical gray"></i>
                     </div>
-
                 </div>
-
+                 
                 <div class="background-chat"></div>
                 <!-- <img src="img/mine.jpg" alt=""> -->
+
+                
 
                 <div class="user-interface flex">
                     <i class="fa-regular fa-face-smile gray"></i>
@@ -104,8 +107,9 @@
             </div>
 
         </div>
-        <script src="js/data.js"></script>
+       
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

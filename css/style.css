@@ -54,6 +54,7 @@
 .contacts-list-col {
     width: 35%;
     height: 100%;
+    flex-direction: column;
 }
 
 .user-chat-col {
@@ -126,6 +127,14 @@
     padding: 15px 10px;
     align-items: center;
     justify-content: space-between;
+}
+
+.user-info span {
+    font-size: 1.2rem;
+}
+
+.contacts-list {
+    overflow-y: scroll;
 }
 
 /* USER-CHAT-COL STRUCTURE */
