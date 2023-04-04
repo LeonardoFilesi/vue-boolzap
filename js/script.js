@@ -6,8 +6,9 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
-            toggle: {contactIndex : null, messageIndex: null},
             activeIndex: 0,
+            searchValue:'',
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -177,7 +178,28 @@ createApp ({
         // attribuisce ad active index = all'indice clickato
            setActiveIndex: function(index) {
             this.activeIndex = index;
-            // this.resetToggle();
+        },
+        // cerca tra i contatti 
+         searchContact: function(searchValue) {
+            this.contacts.forEach(contact => {
+                if(contact.name.toLowerCase().includes(searchValue.toLowerCase())) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
+        },
+        // pusha un nuovo messaggio nella chat
+        pushNewUserMessage: function(message) {
+            const messageTrim = message.trim();
+            if(messageTrim != '') {
+                this.contacts[this.activeIndex].messages.push({
+                    message: message,
+                    status: 'sent',
+                    newUserMessageValue: true,
+                });
+            };
+            this.newMessage = '';
         },
     }
 
