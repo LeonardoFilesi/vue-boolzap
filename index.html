@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -58,20 +57,20 @@
                 </div>
 
                 <div class="contacts-list">
-                    <div class="contact-display flex"
-                    v-for="contact in contacts"
-                    @click="setActiveIndex(index)">
-                        <div class="left-side flex">
-                            <div class="user-icon">
-                                <img :src="`img/${contacts.avatar}}.jpg`" alt="">
+                    <div v-for="(contact, index) in contacts" @click="setActiveIndex(index)">
+                        <div  v-if="contact.visible" class="contact-display flex">
+                            <div class="left-side flex">
+                                <div class="user-icon">
+                                    <img :src="`img/${contact.avatar}.jpg`" alt="">
+                                </div>
+                                <div class="user-info">
+                                    <span>{{ contact.name }}</span>
+                                    <p class="gray">Contact last message</p>
+                                </div>
                             </div>
-                            <div class="user-info">
-                                <span>{{ contact.name }}</span>
-                                <p class="gray">Contact last message</p>
+                            <div>
+                                <p class="light-gray">12:00</p>
                             </div>
-                        </div>
-                        <div>
-                            <p class="light-gray">12:00</p>
                         </div>
                     </div>
                 </div>
@@ -83,9 +82,9 @@
                 <div class="user-interface flex">
                     <div class="left-side flex">
                         <div class="user-icon">
-                            <img src="img/avatar_io.jpg" alt="">
+                            <img :src="`img/${contacts[activeIndex].avatar}.jpg`" alt="">
                         </div>
-                        <p>Sofia</p>
+                        <p>{{contacts[activeIndex].name}}</p>
                     </div>
                     <div class="right-side flex">
                         <i class="fa-solid fa-magnifying-glass gray"></i>
@@ -99,10 +98,12 @@
                 <div class="chat-section">
                     <div class="background-chat"></div>
                     <div class="chat flex">
-                        <div class="chat-in" 
-                        v-for="(message , index) in contacts[activeIndex].messages">
+                        <div 
+                        v-for="(message, index) in contacts[activeIndex].messages"
+                        :class="messagesClass (message)" >
                             <!-- <span class="message">{{ messages.message }}</span> -->
                             <!-- <p class="date">{{ messages.date }}</p> -->
+                            <p>{{ message.message }}</p>
                         </div>
                     </div>
                 </div>

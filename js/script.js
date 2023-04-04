@@ -22,7 +22,7 @@ createApp ({
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Ricordati di stendere i panni',
+                           message: 'Ricordati m di stendere i panni',
                             status: 'sent'
                         },
                         {
@@ -176,8 +176,8 @@ createApp ({
     },
     methods: {
         // attribuisce ad active index = all'indice clickato
-           setActiveIndex: function(index) {
-            this.activeIndex = index;
+           setActiveIndex: function(contactIndex) {
+            this.activeIndex = contactIndex;
         },
         // cerca tra i contatti 
          searchContact: function(searchValue) {
@@ -201,6 +201,16 @@ createApp ({
             };
             this.newMessage = '';
         },
+        // definisce classe del messaggio, in o out
+        messagesClass: function(message) {
+            let messageClass = "";
+            if(message.status === 'sent') {
+                messageClass = "chat-out"
+            } else {
+                messageClass = "chat-in"
+            }
+            return messageClass;
+        }
     }
 
 }).mount("#app");
