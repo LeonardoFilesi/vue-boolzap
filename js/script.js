@@ -8,7 +8,7 @@ createApp ({
         return {
             activeIndex: 0,
             searchValue:'',
-            newMessage: '',
+            newText: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -190,16 +190,16 @@ createApp ({
             });
         },
         // pusha un nuovo messaggio nella chat
-        pushNewUserMessage: function(message) {
-            const messageTrim = message.trim();
+        pushNewUserMessage: function(text) {
+            const messageTrim = text.trim();
             if(messageTrim != '') {
                 this.contacts[this.activeIndex].messages.push({
-                    message: message,
+                    message: text,
                     status: 'sent',
                     newUserMessageValue: true,
                 });
             };
-            this.newMessage = '';
+            this.newText = '';
         },
         // definisce classe del messaggio, in o out
         messagesClass: function(message) {

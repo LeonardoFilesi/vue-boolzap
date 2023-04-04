@@ -110,7 +110,7 @@
 
                 <div class="user-interface flex">
                     <i class="fa-regular fa-face-smile gray"></i>
-                    <input type="text" placeholder="Scrivi un messaggio e premi invio"  @keyup.enter="pushNewUserMessage(newMessage)">
+                    <input type="text" placeholder="Scrivi un messaggio e premi invio"  @keyup.enter="pushNewUserMessage(newText)" v-model="newText">
                     <i class="fa-solid fa-microphone gray"></i>
                 </div>
             </div>
