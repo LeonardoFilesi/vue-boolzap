@@ -179,6 +179,7 @@
     padding: 10px;
     max-width: 40%;
     align-self: flex-start;
+    margin-top: 10px;
 }
 
 .chat-out {
@@ -187,4 +188,5 @@
     padding: 10px;
     max-width: 40%;
     align-self: flex-end;
+    margin-top: 10px;
 }
